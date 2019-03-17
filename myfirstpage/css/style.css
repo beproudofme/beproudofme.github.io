@@ -127,10 +127,6 @@ h1 {
 .todo-content .todo-lists .list-content .tasks .task__text span.done {
   color: #a5b7bf;
 }
-.todo-content .todo-lists .list-content .tasks .task__text span.done::after {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
 .todo-content .todo-lists .list-content .tasks .task:last-child {
   margin-bottom: 0;
 }
