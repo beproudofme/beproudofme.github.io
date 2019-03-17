@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Закрепляем навыки HTML/CSS/JS</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Закрепляем навыки HTML/CSS/JS</h1>	
+		<p class="time">Текущее время - <span id="time"></span></p>
+
+		<div class="todo-wrap">
+			<div class="todo-header">
+				<h2 class="todo-header__title">Список задач</h2>
+				<button class="todo-header__addList btn" id="addList">Добавить список</button>
+			</div>
+			<div class="todo-content">
+				<ul class="todo-lists">
+					<li class="list">
+						<div class="list-header">
+							<p class="list-header__title">Основы верстки</p>
+							<button class="list-header__deleteList btn">Удалить список</button>
+							<button class="list-header__addTask btn">Добавить задачу</button>
+						</div>
+						<div class="list-content">
+							<ul class="tasks">
+								<li class="task">
+									<div class="task__text">
+										<span class="done">Закрепить навыки HTML</span>
+									</div>
+								</li>
+								<li class="task ">
+									<div class="task__text">
+										<span>Закрепить навыки CSS</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="list">
+						<div class="list-header">
+							<p class="list-header__title">Подготовиться к лету</p>
+							<button class="list-header__deleteList btn">Удалить список</button>
+							<button class="list-header__addTask btn">Добавить задачу</button>
+						</div>
+						<div class="list-content">
+							<ul class="tasks">
+								<li class="task">
+									<div class="task__text">
+										<span>130 отжиманий в день</span>
+									</div>
+								</li>
+								<li class="task ">
+									<div class="task__text">
+										<span>Подьем гантелей 40 раз - 5 подходов в день</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

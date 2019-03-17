@@ -1,0 +1,137 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+body {
+	color: #2a363b;
+}
+a {
+	text-decoration: none;
+}
+ul, li {
+	list-style: none;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 50px 0 20px 0;
+	text-align: center;
+}
+
+.time {
+	text-align: center;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	span {
+		font-size: 1.8rem;
+	}
+	margin-bottom: 50px;
+}
+
+.btn {
+	font-size: 1rem;
+	padding: 10px;
+	border: none;
+	color: #fff;
+	background: #ff847c;
+	cursor: pointer;
+	transition: all .2s ease;
+	text-transform: uppercase;
+	&:hover {
+		background: darken(#ff847c, 2%);
+	}
+	&:active {
+		background: darken(#ff847c, 8%);
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+.todo-header {
+	text-align: center;
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
+	&__addList {
+		margin-bottom: 30px;
+	}
+}
+
+.todo-content {	
+	.todo-lists {
+		display: flex;
+		flex-wrap: wrap;
+		.list {
+			width: ~"calc((100% - (20px * 3)) / 4)";
+			padding: 10px;
+			margin-left: 20px;
+			border: 1px solid #ff847c;
+			margin-bottom: 20px;			
+			&-header {
+				text-align: center;
+				&__title {
+					font-size: 1.4rem;
+					margin-bottom: 5px;
+					text-transform: uppercase;
+				}
+				&__deleteList {
+					margin-right: 5px;
+				}				
+			}
+			&-content {
+				margin-top: 10px;
+				.tasks {
+					border-top: 1px solid #ff847c;
+					padding: 10px;
+					.task {
+						font-size: 1.3rem;
+						margin-bottom: 10px;
+						&__text {
+							display: inline-block;
+							position: relative;							
+							span {								
+								cursor: pointer;
+								transition: all .4s ease;
+								&::after {
+									content: '';
+									position: absolute;
+									top: 50%;
+									left: 0;
+									width: 100%;
+									height: 1px;
+									display: block;
+									background: #ff847c;
+									transform: scale(0);
+									transition: all .4s ease;
+								}
+								&.done {
+									color: lighten(#2a363b, 50%);
+								}								
+								&.done::after {
+									transform: scale(1);
+								}
+							}													
+						}						
+					}
+					.task:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+			&:nth-child(4n+1) {
+				margin-left: 0;
+			}
+		}
+	}
+}
